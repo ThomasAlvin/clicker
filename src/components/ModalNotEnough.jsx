@@ -8,11 +8,10 @@ import {
   ModalContent,
   ModalHeader,
   ModalOverlay,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { MdClose } from "react-icons/md";
 
-export default function ({ modalNotEnough, balance }) {
+export default function ModalNotEnough({ modalNotEnough, balance }) {
   return (
     <>
       <Modal

@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
 
-export default function () {
+export default function HomePage() {
   const [balance, setBalance] = useState(200);
   const [tapMoney, setTapMoney] = useState(1);
   const [userMps, setUserMps] = useState(1);

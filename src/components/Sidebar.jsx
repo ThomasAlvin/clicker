@@ -1,18 +1,10 @@
-import {
-  Button,
-  Center,
-  Flex,
-  Icon,
-  useDisclosure,
-  useToast,
-} from "@chakra-ui/react";
+import { Center, Flex, Icon, useToast } from "@chakra-ui/react";
 import { LiaBroomSolid, LiaHandPointerSolid } from "react-icons/lia";
 import { MdWork, MdWorkHistory } from "react-icons/md";
 import { BsFillPiggyBankFill } from "react-icons/bs";
-import ModalNotEnough from "./ModalNotEnough";
 import { useState } from "react";
 
-export default function ({
+export default function SideBar({
   balance,
   setBalance,
   setTapMoney,
@@ -77,7 +69,7 @@ export default function ({
         isClosable: true,
       });
     } else {
-      if (name == "Upgrade Clicks") {
+      if (name === "Upgrade Clicks") {
         setBalance(balance - price);
         setTapMoney(tapMoney + 1);
         set((prevState) => ({
