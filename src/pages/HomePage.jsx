@@ -14,12 +14,12 @@ export default function HomePage() {
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    const interval = setInterval(tick, 1000);
+    const interval = setInterval(() => {
+      setBalance((prevState) => prevState + userMps);
+    }, 1000);
     return () => clearInterval(interval);
   }, [userMps]);
-  const tick = () => {
-    setBalance((prevState) => prevState + userMps);
-  };
+
   function checkWin() {
     modalNotEnough.onOpen();
   }
