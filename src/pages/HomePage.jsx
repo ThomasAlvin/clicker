@@ -7,13 +7,13 @@ export default function HomePage() {
   const [balance, setBalance] = useState(200);
   const [tapMoney, setTapMoney] = useState(1);
   const [userMps, setUserMps] = useState(1);
-  const [time, setTime] = useState(0);
+  const [time] = useState(0);
   const modalNotEnough = useDisclosure();
   function click() {
     setBalance(balance + tapMoney);
   }
   useEffect(() => {
-    const interval = setInterval(tick, 1000);
+    const interval = setInterval(tick(), 1000);
     return () => clearInterval(interval);
   }, [userMps]);
   const tick = () => {
