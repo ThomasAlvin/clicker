@@ -11,13 +11,9 @@ export default function HomePage() {
   const modalNotEnough = useDisclosure();
   function click() {
     setBalance(balance + tapMoney);
-    console.log(userMps);
   }
   useEffect(() => {
     const interval = setInterval(tick, 1000);
-    const timer = setInterval(() => {
-      setTime((prevState) => prevState + 1);
-    }, 1000);
     return () => clearInterval(interval);
   }, [userMps]);
   const tick = () => {
