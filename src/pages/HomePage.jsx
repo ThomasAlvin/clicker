@@ -12,6 +12,7 @@ export default function HomePage() {
   function click() {
     setBalance(balance + tapMoney);
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
