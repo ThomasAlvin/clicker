@@ -12,6 +12,9 @@ import {
 import { MdClose } from "react-icons/md";
 
 export default function ModalNotEnough({ modalNotEnough, balance, timer }) {
+  const totalSeconds = Math.floor(timer / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
   return (
     <>
       <Modal
@@ -43,7 +46,8 @@ export default function ModalNotEnough({ modalNotEnough, balance, timer }) {
               fontWeight={"600"}
             >
               {balance >= 1000000
-                ? "You Win! You Finished In" + timer
+                ? "You Win! You Finished In" +
+                  `${minutes} minutes and ${seconds} seconds`
                 : "Not Enough!"}
             </Center>
           </ModalBody>
