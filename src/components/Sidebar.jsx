@@ -34,14 +34,14 @@ export default function SideBar({
       name: "Doing Chores",
       price: doingChores,
       set: setDoingChores,
-      mps: 15,
+      mps: 12,
       icon: LiaBroomSolid,
     },
     {
       name: "Internship",
       price: internship,
       set: setInternship,
-      mps: 50,
+      mps: 60,
       icon: MdWork,
     },
     {
@@ -61,11 +61,11 @@ export default function SideBar({
   ];
   function upgrades({ name, price, mps, set }) {
     if (balance < price) {
-      //   modalNotEnough.onOpen();
       toast({
         title: "Not enough money",
         status: "error",
         position: "top",
+        duration: 1400,
         isClosable: true,
       });
     } else {

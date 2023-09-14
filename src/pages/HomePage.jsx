@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
 
 export default function HomePage() {
+  const [timerRunning, setTimerRunning] = useState(true);
   const [balance, setBalance] = useState(200);
+  const [timer, setTimer] = useState(0);
   const [tapMoney, setTapMoney] = useState(1);
   const [userMps, setUserMps] = useState(1);
-  const [time] = useState(0);
   const modalNotEnough = useDisclosure();
+
   function click() {
     setBalance(balance + tapMoney);
   }
@@ -19,8 +21,22 @@ export default function HomePage() {
     }, 1000);
     return () => clearInterval(interval);
   }, [userMps]);
+  useEffect(() => {
+    let intervalId;
+    if (timerRunning) {
+      intervalId = setInterval(() => {
+        setTimer((prevState) => prevState + 100);
+      }, 100);
+    }
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [timerRunning]);
 
   function checkWin() {
+    if (balance >= 1000000) {
+      setTimerRunning(false);
+    }
     modalNotEnough.onOpen();
   }
   return (
@@ -74,7 +90,8 @@ export default function HomePage() {
       <ModalNotEnough
         modalNotEnough={modalNotEnough}
         balance={balance}
-        time={time}
+        timer={timer}
+        setTimerRunning={setTimerRunning}
       />
     </>
   );

@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { MdClose } from "react-icons/md";
 
-export default function ModalNotEnough({ modalNotEnough, balance }) {
+export default function ModalNotEnough({ modalNotEnough, balance, timer }) {
   return (
     <>
       <Modal
@@ -42,7 +42,9 @@ export default function ModalNotEnough({ modalNotEnough, balance }) {
               fontSize={"26px"}
               fontWeight={"600"}
             >
-              {balance >= 1000000 ? "You Win! You Finished In" : "Not Enough!"}
+              {balance >= 1000000
+                ? "You Win! You Finished In" + timer
+                : "Not Enough!"}
             </Center>
           </ModalBody>
         </ModalContent>
