@@ -112,11 +112,21 @@ export default function SideBar({
                     borderRadius={"10px"}
                     cursor={"pointer"}
                   >
-                    <Flex flexDir={"column"} pl={"10px"}>
-                      <Flex color={"#1e6b05"} fontWeight={"700"} w={"150px"}>
+                    <Flex h={"50px"} flexDir={"column"} pl={"10px"}>
+                      <Flex
+                        color={"#1e6b05"}
+                        fontWeight={"700"}
+                        w={{ base: "70px", xl: "150px" }}
+                        fontSize={{ base: "0.7rem", xl: "1rem" }}
+                      >
                         {val.name}
                       </Flex>
-                      <Flex color={"#1e6b05"} fontWeight={"500"} mr={"20px"}>
+                      <Flex
+                        color={"#1e6b05"}
+                        fontWeight={"500"}
+                        mr={"20px"}
+                        fontSize={{ base: "0.7rem", xl: "1rem" }}
+                      >
                         {val.price} $
                       </Flex>
                     </Flex>

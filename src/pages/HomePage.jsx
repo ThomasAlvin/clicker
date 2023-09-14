@@ -58,6 +58,7 @@ export default function HomePage() {
               bgColor={"#7bf757"}
               _hover={{ bgColor: "#98f779" }}
               onClick={checkWin}
+              fontSize={{ base: "0.7rem", xl: "1rem" }}
             >
               Get To 1,000,000$ to win
             </Button>
@@ -76,8 +77,8 @@ export default function HomePage() {
           </Center>
           <Center w={"100%"} h={"100%"}>
             <Button
-              w={"100px"}
-              h={"60px"}
+              w={{ base: "100px", xl: "200px" }}
+              h={{ base: "60px", xl: "120px" }}
               bgColor={"#7bf757"}
               _hover={{ bgColor: "#98f779" }}
               onClick={click}
