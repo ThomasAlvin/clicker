@@ -122,7 +122,6 @@ export default function HomePage() {
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
             </Center>
-            <div data-netlify-recaptcha="true"></div>
             <Center>
               <Button
                 type="submit"
@@ -147,6 +146,7 @@ export default function HomePage() {
                 </>
               </Button>
             </Center>
+            <div data-netlify-recaptcha="true"></div>
           </form>
           <Center>
             <Button
