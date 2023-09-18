@@ -4,6 +4,7 @@ import {
   Center,
   Flex,
   Input,
+  Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
@@ -60,46 +61,59 @@ export default function HomePage() {
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
           <form name="contact" method="POST" netlify>
             <input type="hidden" name="form-name" value="contact" />
-            <Box>
-              <Box>Your Name</Box>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex : Tony"
-                h={"50px"}
-                w={{ base: "120px", lg: "290px", xl: "290px" }}
-                focusBorderColor={"crimson"}
-                autocomplete="off"
-                borderColor={"crimson"}
-                variant={"flushed"}
-              ></Input>
-              <Flex w={"100%"} fontSize={"12px"} color={"red"}>
-                lol{" "}
+            <Flex gap={"60px"} justifyContent={"center"}>
+              <Box>
+                <Box>Your Name</Box>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex : Tony"
+                  h={"50px"}
+                  w={{ base: "120px", lg: "290px", xl: "290px" }}
+                  focusBorderColor={"crimson"}
+                  autocomplete="off"
+                  borderColor={"crimson"}
+                  variant={"flushed"}
+                ></Input>
+                <Flex w={"100%"} fontSize={"12px"} color={"red"}>
+                  lol{" "}
+                </Flex>
+              </Box>
+              <Box>
+                <Box>Your Email</Box>
+                <Input
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Ex : tony@gmail.com"
+                  w={{ base: "120px", lg: "290px", xl: "290px" }}
+                  autocomplete="off"
+                  h={"50px"}
+                  borderColor={"crimson"}
+                  focusBorderColor={"crimson"}
+                  variant={"flushed"}
+                ></Input>
+                <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
+              </Box>
+            </Flex>
+            <Center flexDir={"column"}>
+              <Flex flexDir={"column"}>
+                <Flex>Your Message</Flex>
+                <Textarea
+                  name="message"
+                  id="message"
+                  h={"100px"}
+                  placeholder="Ex : Hi Thomas, I just want to say, Have a nice day!"
+                  resize={"none"}
+                  borderColor={"crimson"}
+                  w={{ base: "300px", lg: "640px", xl: "640px" }}
+                  focusBorderColor="crimson"
+                  variant={"flushed"}
+                ></Textarea>
+                <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
-            </Box>
-            <Box>
-              <Box>Your Email</Box>
-              <Input
-                name="email"
-                id="email"
-                type="email"
-                placeholder="Ex : tony@gmail.com"
-                w={{ base: "120px", lg: "290px", xl: "290px" }}
-                autocomplete="off"
-                h={"50px"}
-                borderColor={"crimson"}
-                focusBorderColor={"crimson"}
-                variant={"flushed"}
-              ></Input>
-              <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
-            </Box>
-
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
-            </p>
+            </Center>
             <p>
               <button type="submit">Send</button>
             </p>
