@@ -51,7 +51,8 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          <form action="/thanks" name="contact" method="POST" netlify>
+          <form name="contact" method="POST" netlify>
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 Your Name: <input type="text" name="name" />
@@ -62,7 +63,6 @@ export default function HomePage() {
                 Your Email: <input type="email" name="email" />
               </label>
             </p>
-
             <p>
               <label>
                 Message: <textarea name="message"></textarea>
