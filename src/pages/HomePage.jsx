@@ -65,6 +65,7 @@ export default function HomePage() {
             name="contact"
             method="POST"
             netlify
+            data-netlify-recaptcha="true"
             netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -121,6 +122,8 @@ export default function HomePage() {
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
             </Center>
+            <div data-netlify-recaptcha="true"></div>
+
             <Center>
               <Button
                 type="submit"
@@ -145,7 +148,6 @@ export default function HomePage() {
                 </>
               </Button>
             </Center>
-            <div data-netlify-recaptcha="true"></div>
           </form>
           <Center>
             <Button
