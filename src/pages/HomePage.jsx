@@ -3,6 +3,7 @@ import {
   Button,
   Center,
   Flex,
+  Icon,
   Input,
   Textarea,
   useDisclosure,
@@ -10,6 +11,7 @@ import {
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
+import { FiChevronsRight } from "react-icons/fi";
 
 export default function HomePage() {
   const [timerRunning, setTimerRunning] = useState(true);
@@ -113,6 +115,30 @@ export default function HomePage() {
                 ></Textarea>
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
+            </Center>
+            <Center>
+              <Button
+                type="submit"
+                alignItems={"center"}
+                gap={"10px"}
+                width={"160px"}
+                color={"crimson"}
+                border={"crimson 1px solid"}
+                _hover={{
+                  bgColor: "crimson",
+                  color: "black",
+                  border: "1px black solid",
+                }}
+              >
+                <>
+                  <Box>Submit Form</Box>
+                  <Icon
+                    className="contact-buttonText"
+                    fontSize={"24px"}
+                    as={FiChevronsRight}
+                  ></Icon>
+                </>
+              </Button>
             </Center>
             <p>
               <button type="submit">Send</button>
