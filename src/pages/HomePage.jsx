@@ -3,6 +3,7 @@ import {
   Button,
   Center,
   Flex,
+  Icon,
   Input,
   Textarea,
   useDisclosure,
@@ -10,6 +11,7 @@ import {
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
+import { FiChevronsRight } from "react-icons/fi";
 
 export default function HomePage() {
   const [timerRunning, setTimerRunning] = useState(true);
@@ -126,7 +128,16 @@ export default function HomePage() {
                 color: "black",
                 border: "1px black solid",
               }}
-            ></Button>
+            >
+              <>
+                <Box>Submit Form</Box>
+                <Icon
+                  className="contact-buttonText"
+                  fontSize={"24px"}
+                  as={FiChevronsRight}
+                ></Icon>
+              </>
+            </Button>
             <p>
               <button type="submit">Send</button>
             </p>
