@@ -1,4 +1,11 @@
-import { Button, Center, Flex, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Input,
+  useDisclosure,
+} from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
@@ -53,11 +60,24 @@ export default function HomePage() {
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
           <form name="contact" method="POST" netlify>
             <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
+            <Box>
+              <Box>Your Name</Box>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex : Tony"
+                h={"50px"}
+                w={{ base: "120px", lg: "290px", xl: "290px" }}
+                focusBorderColor={"crimson"}
+                autocomplete="off"
+                borderColor={"crimson"}
+                variant={"flushed"}
+              ></Input>
+              <Flex w={"100%"} fontSize={"12px"} color={"red"}>
+                lol{" "}
+              </Flex>
+            </Box>
             <p>
               <label>
                 Your Email: <input type="email" name="email" />
