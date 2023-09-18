@@ -114,7 +114,19 @@ export default function HomePage() {
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
             </Center>
-
+            <Button
+              type="submit"
+              alignItems={"center"}
+              gap={"10px"}
+              width={"160px"}
+              color={"crimson"}
+              border={"crimson 1px solid"}
+              _hover={{
+                bgColor: "crimson",
+                color: "black",
+                border: "1px black solid",
+              }}
+            ></Button>
             <p>
               <button type="submit">Send</button>
             </p>
