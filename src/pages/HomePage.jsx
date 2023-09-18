@@ -4,6 +4,7 @@ import {
   Center,
   Flex,
   Input,
+  Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
@@ -99,7 +100,7 @@ export default function HomePage() {
             <Center flexDir={"column"}>
               <Flex flexDir={"column"}>
                 <Flex>Your Message</Flex>
-                <textarea
+                <Textarea
                   name="message"
                   id="message"
                   h={"100px"}
@@ -109,7 +110,7 @@ export default function HomePage() {
                   w={{ base: "300px", lg: "640px", xl: "640px" }}
                   focusBorderColor="crimson"
                   variant={"flushed"}
-                ></textarea>
+                ></Textarea>
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
             </Center>
