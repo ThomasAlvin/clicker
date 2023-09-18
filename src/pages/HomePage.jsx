@@ -78,11 +78,23 @@ export default function HomePage() {
                 lol{" "}
               </Flex>
             </Box>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
+            <Box>
+              <Box>Your Email</Box>
+              <Input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Ex : tony@gmail.com"
+                w={{ base: "120px", lg: "290px", xl: "290px" }}
+                autocomplete="off"
+                h={"50px"}
+                borderColor={"crimson"}
+                focusBorderColor={"crimson"}
+                variant={"flushed"}
+              ></Input>
+              <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
+            </Box>
+
             <p>
               <label>
                 Message: <textarea name="message"></textarea>
