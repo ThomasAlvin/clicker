@@ -51,7 +51,7 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          <form name="contact" method="POST" netlify>
+          <form action="/thanks" name="contact" method="POST" netlify>
             <p>
               <label>
                 Your Name: <input type="text" name="name" />
