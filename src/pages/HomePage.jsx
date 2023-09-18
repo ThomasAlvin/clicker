@@ -51,61 +51,26 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          <form
-            name="contact"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
-          >
-            <div class="form-group row">
-              <label for="text" class="col-4 col-form-label">
-                name
+          <form name="contact" netlify>
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+              <label>
+                Your Name: <input type="text" name="name" />
               </label>
-              <div class="col-8">
-                <input id="text" name="text" type="text" class="form-control" />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="text1" class="col-4 col-form-label">
-                email
+            </p>
+            <p>
+              <label>
+                Your Email: <input type="email" name="email" />
               </label>
-              <div class="col-8">
-                <input
-                  id="text1"
-                  name="text1"
-                  type="text"
-                  class="form-control"
-                  required="required"
-                />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="textarea" class="col-4 col-form-label">
-                comments
+            </p>
+            <p>
+              <label>
+                Message: <textarea name="message"></textarea>
               </label>
-              <div class="col-8">
-                <textarea
-                  id="textarea"
-                  name="textarea"
-                  cols="40"
-                  rows="5"
-                  class="form-control"
-                  aria-describedby="textareaHelpBlock"
-                ></textarea>
-                <span id="textareaHelpBlock" class="form-text text-muted">
-                  what do you want to contact us about?
-                </span>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="offset-4 col-8" data-netlify-recaptcha="true"></div>
-            </div>
-            <div class="form-group row">
-              <div class="offset-4 col-8">
-                <button name="submit" type="submit" class="btn btn-primary">
-                  Submit
-                </button>
-              </div>
-            </div>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
           </form>
           <Center>
             <Button
