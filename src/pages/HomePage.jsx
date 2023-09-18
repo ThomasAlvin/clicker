@@ -3,15 +3,11 @@ import {
   Button,
   Center,
   Flex,
-  Icon,
-  Image,
   Input,
   Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
-import loading from "../assets/loading-gif.gif";
-import { FiChevronsRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
 
@@ -22,7 +18,6 @@ export default function HomePage() {
   const [tapMoney, setTapMoney] = useState(1);
   const [userMps, setUserMps] = useState(1);
   const modalNotEnough = useDisclosure();
-  const [coolDown, setCoolDown] = useState(false);
 
   function click() {
     setBalance(balance + tapMoney);
@@ -119,41 +114,7 @@ export default function HomePage() {
                 <Flex w={"100%"} fontSize={"12px"} color={"red"}></Flex>
               </Flex>
             </Center>
-            <Center>
-              <Button
-                type="submit"
-                alignItems={"center"}
-                gap={"10px"}
-                width={"160px"}
-                color={"crimson"}
-                border={"crimson 1px solid"}
-                onClick={() => {
-                  setCoolDown(true);
-                  setTimeout(() => {
-                    setCoolDown(false);
-                  }, 2000);
-                }}
-                isDisabled={coolDown}
-                _hover={{
-                  bgColor: "crimson",
-                  color: "black",
-                  border: "1px black solid",
-                }}
-              >
-                {coolDown ? (
-                  <Image w={"30px"} h={"30px"} src={loading}></Image>
-                ) : (
-                  <>
-                    <Box>Submit Form</Box>
-                    <Icon
-                      className="contact-buttonText"
-                      fontSize={"24px"}
-                      as={FiChevronsRight}
-                    ></Icon>
-                  </>
-                )}
-              </Button>
-            </Center>
+
             <p>
               <button type="submit">Send</button>
             </p>
