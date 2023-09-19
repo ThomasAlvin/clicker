@@ -150,24 +150,30 @@ export default function HomePage() {
           </form> */}
           <form
             name="contact"
-            netlify-honeypot="bot-field"
             method="POST"
-            data-netlify="true"
             data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field"
+            netlify
+            data-netlify="true"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
             <p>
               <label>
-                Your Name: <input type="text" name="name" />
+                {" "}
+                Your Name: <input type="text" name="name" />{" "}
               </label>
             </p>
             <p>
               <label>
-                Your Email: <input type="email" name="email" />
+                {" "}
+                Email: <input type="text" name="email" />{" "}
               </label>
             </p>
             <p>
               <label>
+                {" "}
                 Message: <textarea name="message"></textarea>
               </label>
             </p>
@@ -175,6 +181,7 @@ export default function HomePage() {
             <p>
               <button type="submit">Send</button>
             </p>
+            <input type="hidden" name="form-name" value="contact" />
           </form>
           <Center>
             <Button
