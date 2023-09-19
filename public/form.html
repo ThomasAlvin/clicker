@@ -32,11 +32,14 @@
 <form
   name="contact"
   method="POST"
-  data-netlify="true"
   data-netlify-recaptcha="true"
-  style="display: none"
+  netlify-honeypot="bot-field"
+  netlify
+  data-netlify="true"
 >
-  <input type="hidden" name="form-name" value="contact" />
+  <label>
+    Don’t fill this out if you’re human: <input name="bot-field" />
+  </label>
   <p>
     <label> Your Name: <input type="text" name="name" /> </label>
   </p>
@@ -50,4 +53,5 @@
   <p>
     <button type="submit">Send</button>
   </p>
+  <input type="hidden" name="form-name" value="contact" />
 </form>
