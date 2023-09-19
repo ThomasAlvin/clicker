@@ -123,7 +123,6 @@ export default function HomePage() {
               </Flex>
             </Center>
             <div data-netlify-recaptcha="true"></div>
-
             <Center>
               <Button
                 type="submit"
