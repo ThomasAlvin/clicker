@@ -61,7 +61,7 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          {/* <form
+          <form
             name="contact"
             method="POST"
             netlify-honeypot="bot-field"
@@ -147,7 +147,7 @@ export default function HomePage() {
                 </>
               </Button>
             </Center>
-          </form> */}
+          </form>
           <form
             name="contact"
             method="POST"
