@@ -31,27 +31,13 @@
 </form> -->
 <form
   name="contact"
-  method="POST"
-  data-netlify-recaptcha="true"
-  netlify-honeypot="bot-field"
+  style="display: none"
   netlify
-  data-netlify="true"
+  netlify-honeypot="bot-field"
+  hidden
 >
-  <label>
-    Don’t fill this out if you’re human: <input name="bot-field" />
-  </label>
-  <p>
-    <label> Your Name: <input type="text" name="name" /> </label>
-  </p>
-  <p>
-    <label> Email: <input type="text" name="email" /> </label>
-  </p>
-  <p>
-    <label> Message: <textarea name="message"></textarea></label>
-  </p>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
   <div data-netlify-recaptcha="true"></div>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-  <input type="hidden" name="form-name" value="contact" />
 </form>
