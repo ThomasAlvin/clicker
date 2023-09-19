@@ -1,17 +1,7 @@
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Icon,
-  Input,
-  Textarea,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Button, Center, Flex, useDisclosure } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import ModalNotEnough from "../components/ModalNotEnough";
-import { FiChevronsRight } from "react-icons/fi";
 
 export default function HomePage() {
   const [timerRunning, setTimerRunning] = useState(true);
