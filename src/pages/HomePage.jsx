@@ -61,13 +61,7 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          <form
-            name="contact"
-            method="POST"
-            netlify
-            data-netlify-recaptcha="true"
-            netlify-honeypot="bot-field"
-          >
+          <form name="contact" method="POST">
             <input type="hidden" name="form-name" value="contact" />
             <Flex gap={"60px"} justifyContent={"center"}>
               <Box>
