@@ -1,4 +1,4 @@
-<form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+<!-- <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="contact" />
   <p>
     <label> Your Name: <input type="text" name="name" /> </label>
@@ -12,4 +12,25 @@
   <p>
     <button type="submit">Send</button>
   </p>
+</form> -->
+<form
+  name="contact"
+  method="POST"
+  data-netlify-recaptcha="true"
+  data-netlify="true"
+>
+  <p>
+    <label> Your Name: <input type="text" name="name" /> </label>
+  </p>
+  <p>
+    <label> Email: <input type="text" name="email" /> </label>
+  </p>
+  <p>
+    <label> Message: <textarea name="message"></textarea></label>
+  </p>
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+  <input type="hidden" name="form-name" value="contact" />
 </form>
