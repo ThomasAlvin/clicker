@@ -61,7 +61,7 @@ export default function HomePage() {
           setUserMps={setUserMps}
         />
         <Flex w={"100%"} h={"100%"} flexDir={"column"}>
-          <form
+          {/* <form
             name="contact"
             method="POST"
             netlify-honeypot="bot-field"
@@ -147,6 +147,41 @@ export default function HomePage() {
                 </>
               </Button>
             </Center>
+          </form> */}
+          <form
+            name="contact"
+            method="POST"
+            data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field"
+            netlify
+            data-netlify="true"
+          >
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+            <p>
+              <label>
+                {" "}
+                Your Name: <input type="text" name="name" />{" "}
+              </label>
+            </p>
+            <p>
+              <label>
+                {" "}
+                Email: <input type="text" name="email" />{" "}
+              </label>
+            </p>
+            <p>
+              <label>
+                {" "}
+                Message: <textarea name="message"></textarea>
+              </label>
+            </p>
+            <div data-netlify-recaptcha="true"></div>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+            <input type="hidden" name="form-name" value="contact" />
           </form>
           <Center>
             <Button

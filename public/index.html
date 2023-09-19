@@ -43,8 +43,13 @@
       name="contact"
       method="POST"
       data-netlify-recaptcha="true"
+      netlify-honeypot="bot-field"
+      netlify
       data-netlify="true"
     >
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
       <p>
         <label> Your Name: <input type="text" name="name" /> </label>
       </p>
