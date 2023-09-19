@@ -155,6 +155,7 @@ export default function HomePage() {
             data-netlify="true"
             data-netlify-recaptcha="true"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 Your Name: <input type="text" name="name" />
