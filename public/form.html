@@ -13,7 +13,7 @@
     <button type="submit">Send</button>
   </p>
 </form> -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<!-- <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
   <p>
     <label> Your Name: <input type="text" name="name" /> </label>
   </p>
@@ -28,4 +28,26 @@
     <button type="submit">Send</button>
   </p>
   <input type="hidden" name="form-name" value="contact" />
+</form> -->
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-recaptcha="true"
+  style="display: none"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p>
+    <label> Your Name: <input type="text" name="name" /> </label>
+  </p>
+  <p>
+    <label> Email: <input type="text" name="email" /> </label>
+  </p>
+  <p>
+    <label> Message: <textarea name="message"></textarea></label>
+  </p>
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
