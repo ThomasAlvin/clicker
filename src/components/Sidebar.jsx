@@ -39,7 +39,7 @@ export default function SideBar({
       price: 20,
       icon: LiaHandPointerSolid,
       MPS: 1,
-      desc: "Upgrade your taps With better taps, but also be careful of muscle strains too",
+      desc: "Upgrade your taps With better taps, but also be wary of muscle strains",
       effect:
         "Upgrading this has a tiny chance of restraining taps for 20 seconds",
       level: 1,
@@ -61,7 +61,7 @@ export default function SideBar({
       icon: ImUserTie,
       MPS: 20,
       maxLevel: 5,
-      desc: "again, internships can only take u so far in life, they ain't gonna pay you real money if you keep playing by their rules",
+      desc: "again, internships can only take u so far in life, try getting a real job n00bz",
       effect: "Can only be upgraded 10 times",
       level: 0,
     },
@@ -81,7 +81,8 @@ export default function SideBar({
       icon: MdWork,
       MPS: 600,
       desc: "finally a real job the cash flow is fine but aren't you cravin for more?, maybe ask your boss for a raise or that might be too risky?",
-      effect: "upgrading this has a small chance of erasing this upgrade's MPS",
+      effect:
+        "upgrading this has a small chance of resetting this upgrade's level",
       level: 0,
     },
     {

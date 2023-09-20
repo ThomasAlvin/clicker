@@ -55,7 +55,7 @@ export function CheckSideEffect({
     if (level <= 0) {
     } else if (dice <= 0.12) {
       toast({
-        title: "Your Small business caught fire!",
+        title: "Your Small business somehow caught fire!",
         status: "error",
         position: "top",
         duration: 3000,
@@ -82,7 +82,7 @@ export function CheckSideEffect({
     const dice = Math.random();
     if (dice <= 0.2) {
       toast({
-        title: "Your stonks went downhill!",
+        title: "Your stonkz went downhill!",
         status: "error",
         position: "top",
         duration: 3000,
