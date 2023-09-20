@@ -47,7 +47,7 @@ export default function ModalNotEnough({ modalNotEnough, balance, timer }) {
             >
               {balance >= 1000000
                 ? "You Win! You Finished In" +
-                  `${minutes} minutes and ${seconds} seconds`
+                  ` ${minutes} minutes and ${seconds} seconds`
                 : "Not Enough!"}
             </Center>
           </ModalBody>
