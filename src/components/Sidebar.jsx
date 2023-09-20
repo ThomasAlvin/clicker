@@ -57,10 +57,10 @@ export default function SideBar({
 
     {
       name: "Internship",
-      price: 600,
+      price: 500,
       icon: ImUserTie,
       MPS: 20,
-      maxLevel: 5,
+      maxLevel: 10,
       desc: "again, internships can only take u so far in life, try getting a real job n00bz",
       effect: "Can only be upgraded 10 times",
       level: 0,

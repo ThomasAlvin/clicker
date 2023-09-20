@@ -26,10 +26,10 @@ export function CheckSideEffect({
       });
       const tempDebuffs = [...debuffs];
       if (tempDebuffs[0].applied) {
-        tempDebuffs[0].duration = 20;
+        tempDebuffs[0].duration = 10;
       } else {
         tempDebuffs[0].applied = true;
-        tempDebuffs[0].duration = 20;
+        tempDebuffs[0].duration = 10;
         if (tempDebuffs[0].duration) {
           let intervalId;
           intervalId = setInterval(() => {
