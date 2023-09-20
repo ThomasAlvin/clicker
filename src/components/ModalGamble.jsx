@@ -19,31 +19,37 @@ import tails from "../assets/fear-and-hunger-coin-toss-tails.gif";
 export default function ModalGamble({ setBalance, modalGamble, balance }) {
   const [rolling, setRolling] = useState(false);
   const [amount, setAmount] = useState(0);
+  const [error, setError] = useState(false);
   const [coin, setCoin] = useState("");
   function roll(chosen) {
-    const chosenSide = chosen.target.id;
-    setRolling(true);
-    const dice = Math.random();
-    if (dice <= 0.5) {
-      if (chosenSide === "heads") {
-        setBalance(balance + amount);
-      } else {
-        setBalance(balance - amount);
-      }
-      setCoin("heads");
+    if (balance < amount) {
+      setError(true);
     } else {
-      if (chosenSide === "tails") {
-        setBalance(balance + amount);
+      const chosenSide = chosen.target.id;
+      setRolling(true);
+      const dice = Math.random();
+      if (dice <= 0.5) {
+        if (chosenSide === "heads") {
+          setBalance(balance + amount);
+        } else {
+          setBalance(balance - amount);
+        }
+        setCoin("heads");
       } else {
-        setBalance(balance - amount);
+        if (chosenSide === "tails") {
+          setBalance(balance + amount);
+        } else {
+          setBalance(balance - amount);
+        }
+        setCoin("tails");
       }
-      setCoin("tails");
+      setError(false);
+      setAmount(0);
+      setTimeout(() => {
+        setRolling(false);
+        setCoin("");
+      }, 3800);
     }
-    setAmount(0);
-    setTimeout(() => {
-      setRolling(false);
-      setCoin("");
-    }, 3800);
   }
   function inputHandler(input) {
     const { value } = input.target;
@@ -95,6 +101,10 @@ export default function ModalGamble({ setBalance, modalGamble, balance }) {
                   color={"white"}
                   type="number"
                 ></Input>
+                <Box color={"crimson"} display={error ? "block" : "none"}>
+                  Insufficient Cash
+                </Box>
+
                 <Flex w={"100%"} justifyContent={"space-evenly"}>
                   <Button
                     border={"yellow 1px solid"}
