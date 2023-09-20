@@ -18,7 +18,7 @@ export function CheckSideEffect({
     const dice = Math.random();
     if (dice <= 0.05) {
       toast({
-        title: "Muscle Strain! Your taps are disabled for 20 seconds",
+        title: "Muscle Strain! Your taps are disabled for 10 seconds",
         status: "error",
         position: "top",
         duration: 3000,
