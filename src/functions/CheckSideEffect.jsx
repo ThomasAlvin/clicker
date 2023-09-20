@@ -14,7 +14,7 @@ export function CheckSideEffect({
   balance,
   price,
 }) {
-  if (name == "Upgrade Taps") {
+  if (name === "Upgrade Taps") {
     const dice = Math.random();
     if (dice <= 0.05) {
       toast({

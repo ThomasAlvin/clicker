@@ -7,12 +7,12 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
-import { LiaBroomSolid, LiaHandPointerSolid } from "react-icons/lia";
-import { MdWork, MdWorkHistory } from "react-icons/md";
-import { BsBank2, BsFillPiggyBankFill } from "react-icons/bs";
+import { LiaHandPointerSolid } from "react-icons/lia";
+import { MdWork } from "react-icons/md";
+import { BsBank2 } from "react-icons/bs";
 import { GiPikeman } from "react-icons/gi";
 import { ImUserTie } from "react-icons/im";
-import { TbBusinessplan, TbWoman } from "react-icons/tb";
+import { TbBusinessplan } from "react-icons/tb";
 import { AiOutlineStock } from "react-icons/ai";
 import { useState } from "react";
 import { CheckSideEffect } from "../functions/CheckSideEffect";

@@ -46,7 +46,7 @@ export default function ModalGamble({ setBalance, modalGamble, balance }) {
     }, 3800);
   }
   function inputHandler(input) {
-    const { value, id } = input.target;
+    const { value } = input.target;
     const tempObject = value;
     setAmount(parseInt(tempObject));
     console.log(amount);
@@ -117,7 +117,7 @@ export default function ModalGamble({ setBalance, modalGamble, balance }) {
                 </Flex>
               </Center>
               <Center display={rolling ? "flex" : "none"}>
-                {coin == "heads" ? (
+                {coin === "heads" ? (
                   <Image h={"440px"} w={"290px"} src={heads}></Image>
                 ) : (
                   <Image h={"440px"} w={"290px"} src={tails}></Image>
